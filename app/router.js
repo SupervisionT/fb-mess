@@ -1,13 +1,13 @@
 'use strict';
 
+var utils = require('./utils.js');
+
 module.exports = {
   'GET /': (req, res) => {
     res.end('Hello, World!');
   },
-  'POST /facebook': (req, res) => {
-    res.end();
-  },
   'GET /facebook': (req, res) => {
-    res.end();
+    var challenge = utils.parseUrl(req.url);
+    res.end(challenge['hub.challenge']);
   }
 };

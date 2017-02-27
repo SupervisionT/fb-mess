@@ -4,9 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "node tests/runner.js",
+    "start": "node index.js",
+    "cover": "./node_modules/.bin/istanbul cover tests/runner.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "shot": "^3.4.0",
+    "tape": "^4.6.3"
+  }
 }

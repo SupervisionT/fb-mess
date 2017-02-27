@@ -3,10 +3,11 @@
 var router = require('./router.js');
 
 module.exports = (req, res) => {
-  var pathUrl = `${req.method} ${req.url}`;
-  console.log('pathUrl',pathUrl);
+  var path = req.url.split('?')[0];
+  var route = `${req.method} ${path}`;
+  console.log('route',route);
   try {
-    router[pathUrl](req,res);
+    router[route](req,res);
   } catch (error) {
     res.end('Not found');
   }
