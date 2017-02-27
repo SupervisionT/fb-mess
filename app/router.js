@@ -1,7 +1,6 @@
 'use strict';
 
 var utils = require('./utils.js');
-var env = require('../env.json');
 
 module.exports = {
   'GET /': (req, res) => {
