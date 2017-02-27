@@ -16,7 +16,7 @@ module.exports = {
         console.log('err',err);
         return res.end('Error');
       }
-      console.log('payload',payload);
+      console.log('JSON.stringify(payload)',JSON.stringify(payload));
       res.end();
     });
   }

@@ -14,5 +14,8 @@
     "istanbul": "^0.4.5",
     "shot": "^3.4.0",
     "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0"
   }
 }
