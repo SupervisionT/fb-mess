@@ -38,3 +38,15 @@ test('GET /facebook => fb webhook should return challenge', t => {
     t.end();
   });
 });
+
+test('POST /facebook => fb webhook receive real message', t => {
+  shot.inject(main,{
+    method: 'POST',
+    url: '/facebook',
+    payload: {
+      
+    }
+  },res => {
+    t.end();
+  });
+});
