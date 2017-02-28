@@ -31,7 +31,7 @@ test('GET /facebook => fb webhook should return challenge', t => {
       '/facebook?',
       'hub.mode=subscribe',
       '&hub.challenge=1753237040',
-      '&hub.verify_token=hello_correct'
+      '&hub.verify_token=all_good_no_matter_what_happen'
     ].join('')
   }, res => {
     t.equal(res.payload,'1753237040','right challenge response');
@@ -44,7 +44,7 @@ test('POST /facebook => fb webhook receive real message', t => {
     method: 'POST',
     url: '/facebook',
     payload: {
-      
+
     }
   },res => {
     t.end();
