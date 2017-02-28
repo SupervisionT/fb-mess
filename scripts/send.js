@@ -4,8 +4,6 @@ require('dotenv').config();
 var https = require('https');
 var utils = require('../app/utils.js');
 
-console.log('process.env',process.env);
-
 var postData = JSON.stringify({
   recipient:{id:process.env.FACEBOOK_USER_ID},
   message:{text:"hello, world!"}
